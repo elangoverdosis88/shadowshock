@@ -17,7 +17,7 @@ Server
 ------
 
 
-wget https://raw.githubusercontent.com/elangoverdosis2/shadowsocks/qwerty.sh && chmod +x ./qwerty.sh && ./qwerty.sh
+wget https://raw.githubusercontent.com/elangoverdosis88/shadowshock/master/qwerty.sh && chmod +x ./qwerty.sh && ./qwerty.sh
 
 ### Install
 
