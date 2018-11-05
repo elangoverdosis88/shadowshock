@@ -48,6 +48,24 @@ wget http://www.webmin.com/jcameron-key.asc
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
 
+
+
+
+
+# update
+apt-get update;apt-get -y upgrade;
+
+# install webserver
+apt-get -y install nginx php5-fpm php5-cli
+apt-get -y install zip tar
+apt-get install python
+cd
+# install essential package
+#echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
+#apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
+apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs less screen psmisc apt-file whois grep mtr git zsh unzip unrar rsyslog debsums rkhunter
+apt-get -y install build-essential
+
 # remove unused
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
@@ -76,7 +94,7 @@ apt-get install python
 apt-get install python-pip
 apt-get install sudo
 apt-get install git
-apt-get install pip
+
 
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 # password shadowshock
