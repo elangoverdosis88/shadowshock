@@ -61,7 +61,10 @@ apt-get -y --purge remove dropbear*;
 # update
 apt-get update;apt-get -y upgrade;
 
+# install shadowshock
 apt-get install python-pip
+
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
 # install webserver
 apt-get -y install nginx php5-fpm php5-cli
