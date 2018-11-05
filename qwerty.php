@@ -62,20 +62,20 @@ apt-get -y --purge remove dropbear*;
 apt-get update;apt-get -y upgrade;
 
 # install shadowshock
+apt-get install python
 apt-get install python-pip
+apt-get install sudo
+apt-get install git
 
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+# password shadowshock
+sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start
 
-# install webserver
-apt-get -y install nginx php5-fpm php5-cli
-apt-get -y install zip tar
-apt-get install python
+
+
+
+
 cd
-# install essential package
-#echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
-#apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
-apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs less screen psmisc apt-file whois ptunnel ngrep mtr git zsh unzip unrar rsyslog debsums rkhunter
-apt-get -y install build-essential
 
 # disable exim
 service exim4 stop
@@ -87,7 +87,7 @@ apt-file update
 # setting vnstat
 #vnstat -u -i $ether
 #service vnstat restart
-cd
+
 
 # text wrn
 cd
