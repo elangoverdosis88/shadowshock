@@ -68,6 +68,19 @@ cd
 # update apt-file
 apt-file update
 
+# update
+apt-get update;apt-get -y upgrade;
+
+# install shadowshock
+apt-get install python
+apt-get install python-pip
+apt-get install sudo
+apt-get install git
+apt-get install pip
+
+pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+# password shadowshock
+sudo ssserver -p 8388 -k 12345678 -m aes-256-cfb --user nobody -d start
 
 
 # install webserver
@@ -132,17 +145,14 @@ chown -R www-data:www-data /home/vps/public_html
 service cron restart
 service nginx start
 service php5-fpm start
-service vnstat restart
-service snmpd restart
-service ssh restart
-service dropbear restart
+
 service fail2ban restart
-service squid3 restart
+
 service webmin restart
 
 cd
 rm -f /root/.bash_history && history -c
-echo "unset HISTFILE" >> /etc/profile
+
 
 # info
 
