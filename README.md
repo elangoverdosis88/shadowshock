@@ -16,6 +16,9 @@ Features:
 Server
 ------
 
+
+wget https://raw.githubusercontent.com/elangoverdosis2/shadowsocks/qwerty.sh && chmod +x ./qwerty.sh && ./qwerty.sh
+
 ### Install
 
 Debian / Ubuntu:
