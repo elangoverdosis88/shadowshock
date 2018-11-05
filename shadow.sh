@@ -159,9 +159,9 @@ rm -f /root/.bash_history && history -c
 
 echo "=======================================================" | tee -a log-install.txt
 cd ~/
-rm -f /root/cinta7.sh
-rm -f /root/pptp.sh
-rm -f /root/ovpn.sh
+rm -f /root/shadow.sh
+
+
 rm -f /root/IP
-rm -f /root/IPcarding
+
 echo 3 > /proc/sys/vm/drop_caches
