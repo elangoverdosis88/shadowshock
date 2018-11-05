@@ -22,12 +22,6 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 
 
-# set repo
-wget -O /etc/apt/sources.list $source/debian7/sources.list.debian7
-wget http://www.dotdeb.org/dotdeb.gpg
-wget http://www.webmin.com/jcameron-key.asc
-cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
-cat jcameron-key.asc | apt-key add -;rm jcameron-key.asc
 
 # remove unused
 apt-get -y --purge remove samba*;
@@ -68,30 +62,12 @@ apt-file update
 #service vnstat restart
 
 
-# text wrn
-cd
-rm -rf /root/.bashrc
-wget -O /root/.bashrc $source/debian7/.bashrc
 
-#text gambar
-apt-get install boxes
-# text pelangi
-sudo apt-get install ruby -y
-sudo gem install lolcat
+
+
+
  
-# install webserver
-cd
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf $source/debian7/nginx.conf
-mkdir -p /home/vps/public_html
-echo "<meta http-equiv="refresh" content="0; url=http://arema-nia.com/" />" > /home/vps/public_html/index.html
-echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
-sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
-service php5-fpm restart
-service nginx restart
-cd
+
 
 
 
