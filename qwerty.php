@@ -26,44 +26,7 @@ fi
 # go to root
 cd
 
-# check registered ip
-wget -q -O IP $source/debian7/IP.txt
-if ! grep -w -q $MYIP IP; then
-	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-        echo "     
 
-                       
-               =============== OS-32 & 64-bit ================
-               ♦                                             ♦
-               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	       ♦                     &                       ♦
-	       ♦               DENY SISWANTO                 ♦
-               ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
-               ♦                                             ♦
-               =============== OS-32 & 64-bit ================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
-	
-	rm /root/IP
-	rm cinta7.sh
-	rm -f /root/IP
-	exit
-fi
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
@@ -72,6 +35,7 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
 apt-get install gem
+apt-get install git
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
