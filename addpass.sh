@@ -27,10 +27,11 @@ if [ $? -eq 0 ]; then
 	exit 1
 else
 	read -p "Isikan password akun [$username]: " password
-	
-
-	touch etc/[$username].json
-	echo "$username:$password"
+	read -p "Berapa hari akun [$username] aktif: " AKTIF
+ 	today="$(date +"%Y-%m-%d")"
+	expire=$(date -d "$AKTIF days" +"%Y-%m-%d")
+	useradd -M -N -s /bin/false -e $expire $username
+	echo $username:$password | chpasswd
 clear
 echo -e ""
 echo -e ""
