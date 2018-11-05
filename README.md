@@ -17,7 +17,7 @@ Server
 ------
 
 
-wget https://raw.githubusercontent.com/elangoverdosis88/shadowshock/master/shadow.sh && chmod +x ./shadow && ./shadow.sh
+wget https://raw.githubusercontent.com/elangoverdosis88/shadowshock/master/shadow.sh && chmod +x ./shadow.sh && ./shadow.sh
 
 ### Install
 
