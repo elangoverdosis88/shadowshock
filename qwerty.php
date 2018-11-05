@@ -61,6 +61,8 @@ apt-get -y --purge remove dropbear*;
 # update
 apt-get update;apt-get -y upgrade;
 
+apt-get install python-pip
+
 # install webserver
 apt-get -y install nginx php5-fpm php5-cli
 apt-get -y install zip tar
